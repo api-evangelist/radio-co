@@ -7,8 +7,7 @@ type: Index
 position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-tags:
-  - API
+tags: []
 created: '2025-02-12'
 modified: '2025-02-12'
 url: >-
@@ -21,8 +20,7 @@ apis:
       Your toolset for creating bespoke players. Showcase your station to fit your
       website, apps, and beyond.
     humanURL: ' https://radio.co/api?srsltid=AfmBOoqrBwRnMc5YMYc2BnBhB7Zib-8SPH5bYbflhfCJt176-R7EO2Pb'
-    tags:
-      - API
+    tags: []
     properties:
       - type: Documentation
         url: ' https://radio.co/api?srsltid=AfmBOoqrBwRnMc5YMYc2BnBhB7Zib-8SPH5bYbflhfCJt176-R7EO2Pb'
