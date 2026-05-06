@@ -1,0 +1,165 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Radio.co Public API
+  description: Public Radio.co API for retrieving station status, metadata, and currently-playing track information. Use these
+    endpoints to power custom players, websites, and applications.
+  tags:
+  - Radio
+  - Co
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: radio-co
+    baseUri: https://public.radio.co
+    description: Radio.co Public API HTTP API.
+    resources:
+    - name: stations-stationid-status
+      path: /stations/{stationId}/status
+      operations:
+      - name: get-stations-stationid-status
+        method: GET
+        description: Retrieve full station status
+        inputParameters:
+        - name: stationId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v2-stationid
+      path: /api/v2/{stationId}
+      operations:
+      - name: get-api-v2-stationid
+        method: GET
+        description: Retrieve station metadata
+        inputParameters:
+        - name: stationId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v2-stationid-track-current
+      path: /api/v2/{stationId}/track/current
+      operations:
+      - name: get-api-v2-stationid-track-current
+        method: GET
+        description: Get the currently playing track
+        inputParameters:
+        - name: stationId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: radio-co-rest
+    description: REST adapter for Radio.co Public API.
+    resources:
+    - path: /stations/{stationId}/status
+      name: get-stations-stationid-status
+      operations:
+      - method: GET
+        name: get-stations-stationid-status
+        description: Retrieve full station status
+        call: radio-co.get-stations-stationid-status
+        with:
+          stationId: rest.stationId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /api/v2/{stationId}
+      name: get-api-v2-stationid
+      operations:
+      - method: GET
+        name: get-api-v2-stationid
+        description: Retrieve station metadata
+        call: radio-co.get-api-v2-stationid
+        with:
+          stationId: rest.stationId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /api/v2/{stationId}/track/current
+      name: get-api-v2-stationid-track-current
+      operations:
+      - method: GET
+        name: get-api-v2-stationid-track-current
+        description: Get the currently playing track
+        call: radio-co.get-api-v2-stationid-track-current
+        with:
+          stationId: rest.stationId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: radio-co-mcp
+    transport: http
+    description: MCP adapter for Radio.co Public API for AI agent use.
+    tools:
+    - name: get-stations-stationid-status
+      description: Retrieve full station status
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: radio-co.get-stations-stationid-status
+      with:
+        stationId: tools.stationId
+      inputParameters:
+      - name: stationId
+        type: string
+        description: stationId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-api-v2-stationid
+      description: Retrieve station metadata
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: radio-co.get-api-v2-stationid
+      with:
+        stationId: tools.stationId
+      inputParameters:
+      - name: stationId
+        type: string
+        description: stationId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-api-v2-stationid-track-current
+      description: Get the currently playing track
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: radio-co.get-api-v2-stationid-track-current
+      with:
+        stationId: tools.stationId
+      inputParameters:
+      - name: stationId
+        type: string
+        description: stationId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
