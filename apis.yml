@@ -35,6 +35,15 @@ apis:
       - type: OpenAPI
         url: >-
           https://raw.githubusercontent.com/api-evangelist/radio-co/refs/heads/main/openapi/radio-co-openapi.yml
+common:
+  - type: Integrations
+    url: https://www.radio.co/marketplace
+integrations:
+  - name: Courses
+  - name: Sounds
+  - name: Equipment
+  - name: Software
+  - name: Seasonal Sounds
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
