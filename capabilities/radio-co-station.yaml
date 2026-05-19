@@ -1,0 +1,117 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Radio.co Public API — Station
+  description: 'Radio.co Public API — Station. 2 operations. Lead operation: Retrieve station metadata. Self-contained Naftiko
+    capability covering one Radio Co business surface.'
+  tags:
+  - Radio Co
+  - Station
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    RADIO_CO_API_KEY: RADIO_CO_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: radio-co-station
+    baseUri: https://public.radio.co
+    description: Radio.co Public API — Station business capability. Self-contained, no shared references.
+    resources:
+    - name: api-v2-stationId
+      path: /api/v2/{stationId}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve station metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: stationId
+          in: path
+          type: string
+          required: true
+    - name: stations-stationId-status
+      path: /stations/{stationId}/status
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve full station status
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: stationId
+          in: path
+          type: string
+          required: true
+  exposes:
+  - type: rest
+    namespace: radio-co-station-rest
+    port: 8080
+    description: REST adapter for Radio.co Public API — Station. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/api/v2/{stationid}
+      name: api-v2-stationid
+      description: REST surface for api-v2-stationId.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve station metadata
+        call: radio-co-station.get
+        with:
+          stationId: rest.stationId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/stations/{stationid}/status
+      name: stations-stationid-status
+      description: REST surface for stations-stationId-status.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve full station status
+        call: radio-co-station.get
+        with:
+          stationId: rest.stationId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: radio-co-station-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Radio.co Public API — Station. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: retrieve-station-metadata
+      description: Retrieve station metadata
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: radio-co-station.get
+      with:
+        stationId: tools.stationId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-full-station-status
+      description: Retrieve full station status
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: radio-co-station.get
+      with:
+        stationId: tools.stationId
+      outputParameters:
+      - type: object
+        mapping: $.

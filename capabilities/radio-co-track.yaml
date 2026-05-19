@@ -1,0 +1,76 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Radio.co Public API — Track
+  description: 'Radio.co Public API — Track. 1 operations. Lead operation: Get the currently playing track. Self-contained
+    Naftiko capability covering one Radio Co business surface.'
+  tags:
+  - Radio Co
+  - Track
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    RADIO_CO_API_KEY: RADIO_CO_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: radio-co-track
+    baseUri: https://public.radio.co
+    description: Radio.co Public API — Track business capability. Self-contained, no shared references.
+    resources:
+    - name: api-v2-stationId-track-current
+      path: /api/v2/{stationId}/track/current
+      operations:
+      - name: get
+        method: GET
+        description: Get the currently playing track
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: stationId
+          in: path
+          type: string
+          required: true
+  exposes:
+  - type: rest
+    namespace: radio-co-track-rest
+    port: 8080
+    description: REST adapter for Radio.co Public API — Track. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/api/v2/{stationid}/track/current
+      name: api-v2-stationid-track-current
+      description: REST surface for api-v2-stationId-track-current.
+      operations:
+      - method: GET
+        name: get
+        description: Get the currently playing track
+        call: radio-co-track.get
+        with:
+          stationId: rest.stationId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: radio-co-track-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Radio.co Public API — Track. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: get-currently-playing-track
+      description: Get the currently playing track
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: radio-co-track.get
+      with:
+        stationId: tools.stationId
+      outputParameters:
+      - type: object
+        mapping: $.
