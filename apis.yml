@@ -40,6 +40,8 @@ common:
     url: https://www.linkedin.com/company/radio-co
   - type: Integrations
     url: https://www.radio.co/marketplace
+  - type: LLMsTxt
+    url: https://www.radio.co/llms.txt
 integrations:
   - name: Courses
   - name: Sounds
