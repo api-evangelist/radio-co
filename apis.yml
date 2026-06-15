@@ -21,18 +21,14 @@ apis:
     humanURL: https://radio.co/api
     baseURL: https://public.radio.co
     tags:
-    - Radio
-    - Streaming
-    - Audio
+      - Radio
+      - Streaming
+      - Audio
     properties:
-    - type: Documentation
-      url: https://radio.co/api
-    - type: OpenAPI
-      url: https://raw.githubusercontent.com/api-evangelist/radio-co/refs/heads/main/openapi/radio-co-openapi.yml
-    - type: NaftikoCapability
-      url: capabilities/radio-co-station.yaml
-    - type: NaftikoCapability
-      url: capabilities/radio-co-track.yaml
+      - type: Documentation
+        url: https://radio.co/api
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/api-evangelist/radio-co/refs/heads/main/openapi/radio-co-openapi.yml
 common:
   - type: GitHubOrganization
     url: https://github.com/radiodotco

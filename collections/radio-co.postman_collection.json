@@ -1,0 +1,281 @@
+{
+  "item": [
+    {
+      "id": "486e92f6-48f9-4818-ae6f-1052398b7532",
+      "name": "Station",
+      "description": {
+        "content": "Station status and metadata endpoints",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c986d67f-cd99-4ff7-ab8f-4e476c1717a2",
+          "name": "Retrieve full station status",
+          "request": {
+            "name": "Retrieve full station status",
+            "description": {
+              "content": "Returns track history, bitrate, and complete station status.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "stations",
+                ":stationId",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "stationId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "324cb54a-d3e0-4fb6-8389-575d5c53d2a4",
+              "name": "Station status payload",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "stations",
+                    ":stationId",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "stationId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e5b4e907-6b73-4249-9511-1b437a69d7b0",
+          "name": "Retrieve station metadata",
+          "request": {
+            "name": "Retrieve station metadata",
+            "description": {
+              "content": "Provides station name, logo, and stream URL.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                ":stationId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "stationId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "98c0c735-aa48-4ec4-b4c1-ca85dda9e6af",
+              "name": "Station metadata",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":stationId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "stationId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "308b1ab0-6e11-4090-b1e5-bd6b6f2609ae",
+      "name": "Track",
+      "description": {
+        "content": "Currently playing track information",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5c950a7d-11e3-4765-81a0-6456a6a1ce3e",
+          "name": "Get the currently playing track",
+          "request": {
+            "name": "Get the currently playing track",
+            "description": {
+              "content": "Displays currently playing track, start time, and artwork.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                ":stationId",
+                "track",
+                "current"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "stationId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "23801556-061e-4588-9e4e-c372d5e3f9f3",
+              "name": "Currently playing track",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":stationId",
+                    "track",
+                    "current"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "stationId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://public.radio.co",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "50007a23-2eb6-4a13-9deb-b5e8308178aa",
+    "name": "Radio.co Public API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public Radio.co API for retrieving station status, metadata, and currently-playing track information. Use these endpoints to power custom players, websites, and applications.\n\nContact Support:\n Name: Radio.co",
+      "type": "text/plain"
+    }
+  }
+}

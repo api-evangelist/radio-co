@@ -2,12 +2,12 @@
 
 Your toolset for creating bespoke players. Showcase your station to fit your website, apps, and beyond.
 
-**APIs.yml URL:** [apis.yml](https://raw.githubusercontent.com/api-evangelist/radio-co/refs/heads/main/apis.yml)
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/radio-co/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/radio-co/refs/heads/main/apis.yml)
 
 ## Scope
 
 - **Type:** Index
-- **Position:** Consuming
+- **Position:** Consumer
 - **Access:** 3rd-Party
 
 ## Tags
@@ -20,24 +20,36 @@ Your toolset for creating bespoke players. Showcase your station to fit your web
 ## Timestamps
 
 - **Created:** 2025-02-12
-- **Modified:** 2026-04-28
+- **Modified:** 2026-05-19
 
 ## APIs
 
 ### Radio.co
 
-Public Radio.co API for retrieving station status, metadata, and currently-playing track information.
+Your toolset for creating bespoke players. Showcase your station to fit your website, apps, and beyond.
 
-- **Documentation:** https://radio.co/api
+- **Human URL:** [https://radio.co/api](https://radio.co/api)
 - **Base URL:** `https://public.radio.co`
-- **OpenAPI:** [openapi/radio-co-openapi.yml](openapi/radio-co-openapi.yml)
-- **Authentication:** Publicly accessible (no auth documented)
 
-#### Endpoints
+#### Tags
 
-- `GET /stations/{stationId}/status` — Track history, bitrate, and full station status
-- `GET /api/v2/{stationId}` — Station name, logo, and stream URL
-- `GET /api/v2/{stationId}/track/current` — Currently playing track, start time, artwork
+- Radio
+- Streaming
+- Audio
+
+#### Properties
+
+- [Documentation](https://radio.co/api)
+- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/radio-co/refs/heads/main/openapi/radio-co-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/radio-co.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/radio-co.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+
+## Common Properties
+
+- [GitHub Organization](https://github.com/radiodotco)
+- [LinkedIn](https://www.linkedin.com/company/radio-co)
+- [Integrations](https://www.radio.co/marketplace)
+- [L L Ms Txt](https://www.radio.co/llms.txt)
 
 ## Maintainers
 
