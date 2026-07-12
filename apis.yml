@@ -30,6 +30,8 @@ apis:
       - type: OpenAPI
         url: https://raw.githubusercontent.com/api-evangelist/radio-co/refs/heads/main/openapi/radio-co-openapi.yml
 common:
+  - type: DomainSecurity
+    url: security/radio-co-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/radiodotco
   - type: LinkedIn
@@ -38,6 +40,8 @@ common:
     url: https://www.radio.co/marketplace
   - type: LlmsText
     url: https://www.radio.co/llms.txt
+  - url: https://www.radio.co/blog
+    type: Blog
 integrations:
   - name: Courses
   - name: Sounds
