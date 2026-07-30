@@ -2,9 +2,21 @@ aid: radio-co
 name: Radio.co
 description: Your toolset for creating bespoke players. Showcase your station to fit your website, apps, and beyond.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/radio-co.png
 tags:
   - Radio
   - Streaming
@@ -15,20 +27,30 @@ modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/radio-co/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: radio-co:radio-co
-    name: Radio.co
-    description: Your toolset for creating bespoke players. Showcase your station to fit your website, apps, and beyond.
-    humanURL: https://radio.co/api
-    baseURL: https://public.radio.co
-    tags:
-      - Radio
-      - Streaming
-      - Audio
-    properties:
-      - type: Documentation
-        url: https://radio.co/api
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/radio-co/refs/heads/main/openapi/radio-co-openapi.yml
+- aid: radio-co:radio-co-station-api
+  name: Radio.co Station API
+  description: Station status and metadata endpoints
+  humanURL: https://radio.co/api
+  baseURL: https://public.radio.co
+  tags:
+  - Station
+  properties:
+  - type: OpenAPI
+    url: openapi/radio-co-station-api-openapi.yml
+  - type: Documentation
+    url: https://radio.co/api
+- aid: radio-co:radio-co-track-api
+  name: Radio.co Track API
+  description: Currently playing track information
+  humanURL: https://radio.co/api
+  baseURL: https://public.radio.co
+  tags:
+  - Track
+  properties:
+  - type: OpenAPI
+    url: openapi/radio-co-track-api-openapi.yml
+  - type: Documentation
+    url: https://radio.co/api
 common:
   - type: AgenticAccess
     url: agentic-access/radio-co-agentic-access.yml
