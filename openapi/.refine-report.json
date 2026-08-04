@@ -1,0 +1,16 @@
+{
+  "provider": "radio-co",
+  "sources": [
+    "radio-co-station-api-openapi.yml",
+    "radio-co-track-api-openapi.yml"
+  ],
+  "outputs": [
+    "radio-co-station-api-openapi.yml",
+    "radio-co-track-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

@@ -1,0 +1,59 @@
+openapi: 3.0.3
+info:
+  title: Radio.co Public API
+  description: >-
+    Public Radio.co API for retrieving station status, metadata, and
+    currently-playing track information. Use these endpoints to power custom
+    players, websites, and applications.
+  version: "2.0"
+  contact:
+    name: Radio.co
+    url: https://radio.co/api
+servers:
+  - url: https://public.radio.co
+    description: Radio.co public API
+tags:
+  - name: Station
+    description: Station status and metadata endpoints
+  - name: Track
+    description: Currently playing track information
+paths:
+  /stations/{stationId}/status:
+    get:
+      tags: [Station]
+      summary: Retrieve full station status
+      description: Returns track history, bitrate, and complete station status.
+      parameters:
+        - name: stationId
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Station status payload
+  /api/v2/{stationId}:
+    get:
+      tags: [Station]
+      summary: Retrieve station metadata
+      description: Provides station name, logo, and stream URL.
+      parameters:
+        - name: stationId
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Station metadata
+  /api/v2/{stationId}/track/current:
+    get:
+      tags: [Track]
+      summary: Get the currently playing track
+      description: Displays currently playing track, start time, and artwork.
+      parameters:
+        - name: stationId
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Currently playing track
