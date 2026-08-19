@@ -25,7 +25,7 @@ tags:
 created: '2025-02-12'
 modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/radio-co/refs/heads/main/apis.yml
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: radio-co:radio-co-station-api
   name: Radio.co Station API
