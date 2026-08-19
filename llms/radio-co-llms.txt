@@ -1,0 +1,42 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2865
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww17420\viewh20760\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 # Radio.co> Create and manage your own internet radio station\
+Radio.co is an all-in-one platform that provides the software, tools, and support for anyone to start, run, and grow a successful online radio station. We handle the streaming technology, automation, scheduling, and listener analytics so broadcasters can focus on their content.\
+\
+## Core Platform & Services\
+This section describes our main product: the radio broadcasting platform.\
+- [Homepage](https://www.radio.co): A high-level overview of the platform and how to start a station.\
+- [Platform](https://www.radio.co/platform): Details on specific tools like the automated scheduler, live broadcasting, listener analytics, custom web players, and mobile apps.\
+- [Pricing](https://www.radio.co/pricing): Describes the different subscription plans and the features included in each.\
+- [Services](https://www.radio.co/services): An assortment of services to help broadcasters, including radio training and in-store audio.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 - [Marketplace](https://www.radio.co/marketplace): A place to get courses, sounds, software, and equipment to help radio stations grow.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+## Audience & Use Cases\
+This section explains who our platform is for and how they use it.\
+- [Solutions](https://www.radio.co/solutions): Examples of how different groups use Radio.co, such as for community radio, business stations, educational broadcasters, and hobbyist music stations.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 - [Customers](https://www.radio.co/customer-stories): Stories of stations using Radio.co, from solo creators to global brands.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+## Help & Learning Resources\
+These are the primary resources for helping broadcasters get started and succeed.\
+- [Help Centre](https://help.radio.co/): A searchable knowledge base with "how-to" articles, technical tutorials, and troubleshooting guides for using the platform.\
+- [Blog](https://www.radio.co/blog): Publishes articles on tips for radio broadcasting, music licensing, marketing a station, and radio industry news.\
+- [FAQ](https://www.radio.co/faq): Quick answers to the most common problems on starting and growing an online radio station.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 - [Demo](https://www.radio.co/demo): A place to book a demo to talk with a real-person, one-on-one via a call.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+## Company Information\
+- [About Us](https://www.radio.co/about): Our company's mission, team, and history. We are focused on making internet radio accessible to everyone.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 - [Why Choose Us](https://www.radio.co/about/why-choose-us): A brief look at what makes Radio.co the best choice for broadcasters.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 - [Contact](https://www.radio.co/contact): How to get in touch with our sales or support teams.}

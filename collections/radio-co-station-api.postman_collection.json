@@ -1,0 +1,188 @@
+{
+  "item": [
+    {
+      "id": "dd57256b-c433-4c54-8fbc-e510cb53c4c2",
+      "name": "Station",
+      "description": {
+        "content": "Station status and metadata endpoints",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3b731375-dcd5-49fe-8ee4-be9732e59764",
+          "name": "Retrieve full station status",
+          "request": {
+            "name": "Retrieve full station status",
+            "description": {
+              "content": "Returns track history, bitrate, and complete station status.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "stations",
+                ":stationId",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "stationId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "095fe090-e10d-4d5b-922f-24621646de95",
+              "name": "Station status payload",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "stations",
+                    ":stationId",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "stationId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "218d3d42-b600-4d8b-a463-6d9d454aad9c",
+          "name": "Retrieve station metadata",
+          "request": {
+            "name": "Retrieve station metadata",
+            "description": {
+              "content": "Provides station name, logo, and stream URL.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                ":stationId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "stationId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "18565514-e253-4423-a368-1a3ab7c7c802",
+              "name": "Station metadata",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":stationId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "stationId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://public.radio.co",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "bdad5dba-b753-4e2e-91d4-30a384177fce",
+    "name": "Radio.co Public Station API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public Radio.co API for retrieving station status, metadata, and currently-playing track information. Use these endpoints to power custom players, websites, and applications.\n\nContact Support:\n Name: Radio.co",
+      "type": "text/plain"
+    }
+  }
+}

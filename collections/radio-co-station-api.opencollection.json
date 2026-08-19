@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Radio.co Public Station API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Station",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve full station status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://public.radio.co/stations/:stationId/status",
+            "params": [
+              {
+                "name": "stationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns track history, bitrate, and complete station status."
+        },
+        {
+          "info": {
+            "name": "Retrieve station metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://public.radio.co/api/v2/:stationId",
+            "params": [
+              {
+                "name": "stationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Provides station name, logo, and stream URL."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

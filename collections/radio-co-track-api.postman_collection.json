@@ -1,0 +1,114 @@
+{
+  "item": [
+    {
+      "id": "ed4bbc56-8807-4211-bcb6-ee1bdc839d90",
+      "name": "Track",
+      "description": {
+        "content": "Currently playing track information",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "12f07cff-806b-4e13-a75d-6e8e6be54299",
+          "name": "Get the currently playing track",
+          "request": {
+            "name": "Get the currently playing track",
+            "description": {
+              "content": "Displays currently playing track, start time, and artwork.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                ":stationId",
+                "track",
+                "current"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "stationId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f451a4f4-a179-49e5-9127-6e75566c5847",
+              "name": "Currently playing track",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    ":stationId",
+                    "track",
+                    "current"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "stationId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://public.radio.co",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f3e83616-d7fa-4ff3-ace3-625acf571aa6",
+    "name": "Radio.co Public Station Track API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public Radio.co API for retrieving station status, metadata, and currently-playing track information. Use these endpoints to power custom players, websites, and applications.\n\nContact Support:\n Name: Radio.co",
+      "type": "text/plain"
+    }
+  }
+}

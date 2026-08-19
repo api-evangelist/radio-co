@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Radio.co Public Station Track API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Track",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the currently playing track",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://public.radio.co/api/v2/:stationId/track/current",
+            "params": [
+              {
+                "name": "stationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Displays currently playing track, start time, and artwork."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
