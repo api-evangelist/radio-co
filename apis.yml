@@ -2,6 +2,17 @@ aid: radio-co
 name: Radio.co
 description: Your toolset for creating bespoke players. Showcase your station to fit your website, apps, and beyond.
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: true
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
