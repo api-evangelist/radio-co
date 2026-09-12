@@ -63,6 +63,8 @@ apis:
   - type: Documentation
     url: https://radio.co/api
 common:
+  - type: Website
+    url: https://www.radio.co/
   - type: AgenticAccess
     url: agentic-access/radio-co-agentic-access.yml
   - type: DomainSecurity
