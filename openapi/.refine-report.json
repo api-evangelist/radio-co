@@ -1,8 +1,7 @@
 {
   "provider": "radio-co",
   "sources": [
-    "radio-co-station-api-openapi.yml",
-    "radio-co-track-api-openapi.yml"
+    "_original/radio-co-openapi.yml"
   ],
   "outputs": [
     "radio-co-station-api-openapi.yml",
@@ -11,6 +10,13 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "radio-co-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "radio-co-station-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "radio-co-track-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
