@@ -63,6 +63,12 @@ apis:
   - type: Documentation
     url: https://radio.co/api
 common:
+  - type: Plans
+    url: plans/radio-co-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/radio-co-rate-limits.yml
+  - type: FinOps
+    url: finops/radio-co-finops.yml
   - type: Website
     url: https://www.radio.co/
   - type: AgenticAccess
